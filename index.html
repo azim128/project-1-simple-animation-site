@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="hero">
+        <nav class="content">
+            <img src="images/planetX-logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Protfolio</a></li>
+            </ul>
+        </nav>
+        <h1>The magical </br>planet</h1>
+        <button type="button">Explore The Life</button>
+        <div class="indicator">
+            <span></span>
+            <span></span>
+            <span class="active"></span>
+        </div>
+        <div class="cta">
+            <p>You can explore more about this Plante As Other Plantes Found Near Earth </p>
+            <button type="button">Cheek Out Mars &#x27F6</button>
+        </div>
+    </div>
+
+    
+    <div class="container">
+        <div class="runway">
+        </div>
+        <img src="images/airplane.png" alt="" class="airplane">
+    </div>
+
+    <div class="background-change">
+        <div class="img-box">
+            <img src="images/background_change_img/transparent.png" width="100%" alt="">
+            <div class="img-warp"style="width=100%;">
+                <img height= "455.5px" src="images/background_change_img/original.jpg" id="orginalImg">
+            </div>
+        </div>
+        
+    </div>
+
+
+                    
+ 
+<script>
+    var ImgBox = document.querySelector(".img-box");
+    var Imgwarp = document.querySelector(".img-warp");
+    var OrginalImg = document.getElementById("orginalImg");
+
+    OrginalImg.style.width=ImgBox.offsetwidth+'px';
+
+    var leftspace= ImgBox.offsetLeft;
+    
+
+    ImgBox .onmousemove = function(e){
+        var boxWidth = (e.pageX-leftspace)+'px';
+        Imgwarp.style.width= boxWidth;
+    }
+
+</script>
+
+</body>
+</html>
